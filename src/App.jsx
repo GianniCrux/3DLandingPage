@@ -6,10 +6,10 @@ import { EffectComposer, DepthOfField } from "@react-three/postprocessing"
 
 
 
-function Banana({ z }) {
+function Lemon({ z }) {
 
   const ref = useRef()
-  const { nodes, materials } = useGLTF('/banana-transformed.glb')
+  const { nodes, materials } = useGLTF('/lemon-transformed.glb')
   /* const [clicked, setClicked] = useState(false) */
   const { viewport, camera } = useThree()
   const { width, height } = viewport.getCurrentViewport(camera, [0, 0, z])
@@ -29,7 +29,7 @@ function Banana({ z }) {
     ref.current.position.y = Math.sin(state.clock.elapsedTime) * 2 
     ref.current.position.x = Math.sin(state.clock.elapsedTime) * 2  */
     /* ref.current.position.z = THREE.MathUtils.lerp(ref.current.position.z, clicked ? 1 : 0, 0.1) */
-    ref.current.rotation.set((data.rX += 0.001), (data.rY += 0.001), (data.rZ += 0.001))
+    ref.current.rotation.set((data.rX += 0.001), (data.rY += 0.010), (data.rZ += 0.001))
     ref.current.position.set(data.x * width, (data.y += 0.025), z)
     if (data.y > height) data.y = -height 
     
@@ -39,9 +39,9 @@ function Banana({ z }) {
   return (
     <mesh 
       ref={ref}
-      geometry={nodes.Banana.geometry} 
-      material={materials.Skin} 
-      material-emessive="orange"
+      geometry={nodes.lemon.geometry} 
+      material={materials.skin} 
+      material-emessive="yellow"
   />
   )
 }
@@ -50,14 +50,14 @@ function Banana({ z }) {
 export default function App({ count = 100, depth = 80 }) {
   return (
     <Canvas gl={{ aplha: false }} camera={{ near: 0.01, far: 110, fov: 30}} > {/* A container that contains a shape and a material */}
-    <color attach="background" args={["#ffbf40"]} />
+    <color attach="background" args={["#FFA500"]} />
     <spotLight position={[10, 10, 10]} intensity={1} />
     <Suspense fallback={null} >
     <Environment preset='sunset' />
-    {Array.from({ length: count }, (_, i) => (<Banana key={i} z={-(i / count) * depth - 20} />
+    {Array.from({ length: count }, (_, i) => (<Lemon key={i} z={-(i / count) * depth - 20} />
   ))}
     <EffectComposer>
-      <DepthOfField target={0, 0, depth / 2} focalLength={0.5} bokehScale={11} height={700} />
+      <DepthOfField target={0, 0, depth / 2} focalLength={0.5} bokehScale={8} height={700} />
     </EffectComposer>
     </Suspense>
     </Canvas>
