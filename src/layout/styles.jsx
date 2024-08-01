@@ -33,6 +33,28 @@ export const TopLeft = styled.div`
   position: absolute;
   top: 5vw;
   left: 5vw;
+@media (max-width: 768px) {
+    top: 3vw;
+    left: 3vw;
+  }
+
+  @media (max-width: 480px) {
+    top: 2vw;
+    left: 2vw;
+  }
+
+  h1 {
+    font-size: max(8vw, 2em);
+    line-height: 0.85em;
+
+    @media (max-width: 768px) {
+      font-size: max(6vw, 1.5em);
+    }
+
+    @media (max-width: 480px) {
+      font-size: max(5vw, 1.2em);
+    }
+  }
 `
 
 export const BottomLeft = styled.div`

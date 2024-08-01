@@ -9,9 +9,9 @@ export default function Overlay() {
           <br />
           FOR YOU LEMONADES —
         </h1>
-        <p>With a bit of blender</p>
       </TopLeft>
       <BottomLeft>
+        <p>With a bit of blender,</p>
         A revisitation of <a href="https://playful.software">playful.software</a> and <a href="https://bananas.vercel.app/">Bananas</a> 
       </BottomLeft>
       <BottomRight>

@@ -49,9 +49,9 @@ import { EffectComposer, DepthOfField } from "@react-three/postprocessing"
 
 export default function Lemons({ count = 100, depth = 80 }) {
   return (
-    <Canvas gl={{ aplha: false }} camera={{ near: 0.01, far: 110, fov: 30}} > {/* A container that contains a shape and a material */}
+    <Canvas flat gl={{ aplha: false }} camera={{ position: [0, 0, 10] ,near: 0.01, far: 110, fov: 30}} > {/* A container that contains a shape and a material */}
     <color attach="background" args={["#FFA500"]} />
-    <spotLight position={[10, 10, 10]} intensity={1} />
+    <spotLight position={[10, 10, 10]} penumbra={1} decay={0} intensity={3} color="orange" />
     <Suspense fallback={null} >
     <Environment preset='sunset' />
     {Array.from({ length: count }, (_, i) => (<Lemon key={i} z={-(i / count) * depth - 20} />
