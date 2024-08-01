@@ -6,7 +6,7 @@ import { EffectComposer, DepthOfField } from "@react-three/postprocessing"
 
 
 
-function Lemon({ z }) {
+ function Lemon({ z }) {
 
   const ref = useRef()
   const { nodes, materials } = useGLTF('/lemon-transformed.glb')
@@ -47,7 +47,7 @@ function Lemon({ z }) {
 }
 
 
-export default function App({ count = 100, depth = 80 }) {
+export default function Lemons({ count = 100, depth = 80 }) {
   return (
     <Canvas gl={{ aplha: false }} camera={{ near: 0.01, far: 110, fov: 30}} > {/* A container that contains a shape and a material */}
     <color attach="background" args={["#FFA500"]} />
