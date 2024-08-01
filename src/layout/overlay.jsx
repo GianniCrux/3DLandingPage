@@ -33,10 +33,11 @@ export default function Overlay() {
         Find yourself better! |
         <br />
       </BottomRight>
+      
       <Hamburger>
-        <div />
-        <div />
-        <div />
+      <a target='_blank' href="https://github.com/GianniCrux">
+        <img src='/github-mark.svg' alt='GitHub profile' />
+      </a>
       </Hamburger>
     </Container>
   )

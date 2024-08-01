@@ -94,6 +94,7 @@ export const Hamburger = styled.div`
     background: #252525;
     margin-bottom: 6px;
   }
+  z-index: 11;
 `
 
 export const LeftMiddle = styled.div`

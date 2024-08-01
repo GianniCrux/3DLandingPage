@@ -5,7 +5,7 @@ import Overlay from "./layout/overlay";
 import Lemons from "./Lemon";
 
 export default function App() {
-    const [speed, setSpeed] = useState(1)
+    const [speed, set] = useState(1)
     return (
         <>
         <Suspense>
@@ -14,7 +14,7 @@ export default function App() {
         </Suspense>
         <Overlay />
         <LeftMiddle>
-        <input type="range" min="0" max="10" value={speed} step="1" onChange={(e) => setSpeed(e.target.value)} />
+        <input type="range" min="0" max="10" value={speed} step="1" onChange={(e) => set(e.target.value)} />
         </LeftMiddle>
         </>
     )
