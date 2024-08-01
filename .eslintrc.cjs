@@ -17,5 +17,8 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+    "rules": {
+  "react/no-unknown-property": ["error", { "ignore": ["attach", "args", "position", "decay", "intensity"] }]
+}
   },
 }

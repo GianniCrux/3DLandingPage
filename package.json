@@ -2,6 +2,7 @@
   "name": "3d-tries",
   "private": true,
   "version": "0.0.0",
+  "description": "Revisitation of a landing page built with React Three Fiber and three.js, built to make practice with 3D objects, environment, and animations. The page takes idea from https://playful.software and https://bananas.vercel.app/",
   "type": "module",
   "scripts": {
     "dev": "vite",

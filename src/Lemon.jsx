@@ -57,7 +57,7 @@ export default function Lemons({ count = 100, depth = 80 }) {
     {Array.from({ length: count }, (_, i) => (<Lemon key={i} z={-(i / count) * depth - 20} />
   ))}
     <EffectComposer>
-      <DepthOfField target={0, 0, depth / 2} focalLength={0.5} bokehScale={8} height={700} />
+      <DepthOfField target={[0, 0, depth / 2]} focalLength={0.5} bokehScale={8} height={700} />
     </EffectComposer>
     </Suspense>
     </Canvas>

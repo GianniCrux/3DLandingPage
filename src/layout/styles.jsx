@@ -33,19 +33,24 @@ export const TopLeft = styled.div`
   position: absolute;
   top: 5vw;
   left: 5vw;
+  right: 5vw;
+  z-index:10;
 @media (max-width: 768px) {
     top: 3vw;
     left: 3vw;
+    right: 3vw;
   }
 
   @media (max-width: 480px) {
     top: 2vw;
     left: 2vw;
+    right: 2vw;
   }
 
   h1 {
     font-size: max(8vw, 2em);
     line-height: 0.85em;
+    margin-bottom: 20px;
 
     @media (max-width: 768px) {
       font-size: max(6vw, 1.5em);
@@ -102,4 +107,5 @@ export const LeftMiddle = styled.div`
   font-size: 12px;
   transform: rotate(90deg) translate3d(50%, 0, 0);
   transform-origin: 100% 50%;
+  z-index: 5;
 `

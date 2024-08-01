@@ -5,25 +5,26 @@ export default function Overlay() {
     <Container>
       <TopLeft>
         <h1>
+        — 
           LEMONS
           <br />
-          FOR YOU LEMONADES —
+          FOR YOUR LEMONADES  —
         </h1>
       </TopLeft>
       <BottomLeft>
         <p>With a bit of blender,</p>
-        A revisitation of <a href="https://playful.software">playful.software</a> and <a href="https://bananas.vercel.app/">Bananas</a> 
+        A revisitation of <a target='_blank' href="https://playful.software">playful.software</a> and <a target='_blank' href="https://bananas.vercel.app/">Bananas</a> 
       </BottomLeft>
       <BottomRight>
         Get inspired by other |
         <br />
         Navigates on the web |
         <br />
-        Learn from others |
-        <br />
-        Apply your ideas |
+        Learn from the web |
         <br />
         Discover |
+        <br />
+        Develop your ideas |
         <br />
         Animate |
         <br />
