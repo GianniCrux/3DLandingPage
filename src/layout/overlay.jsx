@@ -16,13 +16,13 @@ export default function Overlay() {
         A revisitation of <a target='_blank' href="https://playful.software">playful.software</a> and <a target='_blank' href="https://bananas.vercel.app/">Bananas</a> 
       </BottomLeft>
       <BottomRight>
-        Get inspired by other |
+        Get inspired |
         <br />
         Navigates on the web |
         <br />
         Learn from the web |
         <br />
-        Discover |
+        Ask question |
         <br />
         Develop your ideas |
         <br />
